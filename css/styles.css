@@ -374,8 +374,8 @@ button:hover {
     }
 
     .descripcion p {
-        font-size: 1rem;  /* Reducir el tamaño del texto del párrafo */
-        padding: 0 15px;  /* Agregar padding lateral para evitar que el texto toque los bordes */
+        font-size: 1rem;  
+        padding: 0 15px;  
     }
 
     .descripcion {
