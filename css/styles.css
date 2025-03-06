@@ -127,7 +127,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
     max-width: 800px;
     padding-top: 50px;
 }
@@ -370,6 +369,19 @@ button:hover {
         height: auto;
     }
 
+    .descripcion h1{
+        font-size: 2.5em;
+    }
+
+    .descripcion p {
+        font-size: 1rem;  /* Reducir el tamaño del texto del párrafo */
+        padding: 0 15px;  /* Agregar padding lateral para evitar que el texto toque los bordes */
+    }
+
+    .descripcion {
+        padding-top: 20px;
+    }
+
     .pros ul {
         display: block;
         padding: 0;
@@ -410,3 +422,16 @@ button:hover {
         padding: 12px;
     }
 }
+
+/*pasos para git:
+
+git init(solo una vez)
+
+git status
+
+git add .
+
+git commit -m "que cambios hice"
+
+git push
+*/
