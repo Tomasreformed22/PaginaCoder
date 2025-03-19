@@ -1,19 +1,18 @@
 /*------------------Estilos Generales-------------------*/
+$font-family: "Rubik", serif;
+$primary-color: rgb(200, 220, 255);
+$button-color: rgb(0, 255, 255);
+$hover-color: rgb(255, 20, 147);
 
 * {
-    font-family: "Rubik", serif;
+    font-family: $font-family;
     font-size: 15px;
-    color: rgb(200, 220, 255);
+    color: $primary-color;
     box-sizing: border-box;
-
 }
 
 body {
-    background-image: url(../img/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background: url(../img/background.jpg) center/cover fixed no-repeat;
     padding-top: 100px;
 }
 
@@ -29,19 +28,10 @@ ul {
     gap: 20px;
 }
 
-h1 {
-    font-size: 3.8em;
-    color: rgb(207, 87, 255);
-}
-
-h2 {
-    font-size: 3em;
-    color: rgb(255, 20, 147);
-}
-
-h3 {
-    font-size: 2em;
-    color: rgb(139, 55, 250);
+h1, h2, h3 {
+    &.h1 { font-size: 3.8em; color: rgb(207, 87, 255); }
+    &.h2 { font-size: 3em; color: $hover-color; }
+    &.h3 { font-size: 2em; color: rgb(139, 55, 250); }
 }
 
 button {
@@ -52,13 +42,12 @@ button {
     border: 2px solid rgba(0, 255, 255, 0.411);
     box-shadow: 5px 5px 10px rgba(0, 255, 255, 0.493);
     color: black;
-    background-color: rgb(0, 255, 255);
-}
+    background-color: $button-color;
 
-button:hover {
-    background-color: rgb(255, 20, 147);
+    &:hover {
+        background-color: $hover-color;
+    }
 }
-
 
 /*----------------------Header estilos-------------------*/
 
@@ -82,59 +71,54 @@ button:hover {
     width: 100%;
     z-index: 1000;
     height: 80px;
-    padding: 0px 0px;
     background-color: rgba(0, 0, 0, 0.589);
 }
 
 .navbar {
     padding: 15px;
-}
+    .nav-link {
+        color: $button-color;
+        font-size: 18px;
+        transition: all 0.3s ease-in-out;
 
-.navbar .nav-link {
-    color: rgb(0, 255, 255);
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
-}
+        &:hover {
+            color: rgb(140, 0, 255);
+            text-shadow: 0px 0px 10px rgb(225, 0, 255);
+        }
 
-.navbar .nav-link:hover {
-    color: rgb(140, 0, 255);
-    text-shadow: 0px 0px 10px rgb(225, 0, 255);
-}
-
-.navbar .nav-link.active {
-    font-weight: bold;
-    color: rgb(255, 0, 98);
+        &.active {
+            font-weight: bold;
+            color: rgb(255, 0, 98);
+        }
+    }
 }
 
 .navbar-toggler {
     border: none;
     padding: 8px;
     background-color: rgb(189, 0, 101);
-    ;
-}
-
-.navbar-toggler:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(255, 0, 150, 0.7);
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px rgba(255, 0, 150, 0.7);
+    }
 }
 
 
 
 .descripcion {
     width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 800px;
     padding-top: 50px;
-}
 
-.descripcion img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+    img {
+        width: 100%;
+        max-width: 800px;
+    }
 }
 
 /*-------------------Estilos main------------------*/
@@ -152,13 +136,14 @@ button:hover {
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(0, 255, 255, 0.11);
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
 }
 
-.contenedorSecciones img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
 
 .texto {
     display: flex;
@@ -173,24 +158,23 @@ button:hover {
     padding: 30px;
     background-color: rgba(234, 0, 255, 0.178);
     border-radius: 15px;
-}
 
-.pros ul {
-    padding: 0;
-    text-align: center;
-    display: inline-block;
-}
+    ul {
+        padding: 0;
+        text-align: center;
+        display: inline-block;
 
-.pros li {
-    margin-bottom: 15px;
-    font-size: 16px;
-    padding: 10px;
-    line-height: 1.5;
-    background-color: rgba(0, 201, 228, 0.322);
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px rgb(2, 255, 255);
+        li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            padding: 10px;
+            line-height: 1.5;
+            background-color: rgba(0, 201, 228, 0.322);
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgb(2, 255, 255);
+        }
+    }
 }
-
 
 
 
@@ -205,62 +189,62 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
     text-align: center;
-}
 
-.contacto-container h2 {
-    color: rgb(255, 20, 147);
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
+    h2 {
+        color: rgb(255, 20, 147);
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
 
-.contacto-container p {
-    color: rgb(200, 220, 255);
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+    p {
+        color: rgb(200, 220, 255);
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
 
-.contacto-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.contacto-container label {
-    font-weight: bold;
-    text-align: left;
-    display: block;
-}
+    label {
+        font-weight: bold;
+        text-align: left;
+        display: block;
+    }
 
-.contacto-container input,
-.contacto-container textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid rgba(0, 255, 255, 0.5);
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(200, 220, 255);
-    font-size: 16px;
-}
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid rgba(0, 255, 255, 0.5);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(200, 220, 255);
+        font-size: 16px;
+    }
 
-.contacto-container textarea {
-    resize: vertical;
-}
+    textarea {
+        resize: vertical;
+    }
 
-.contacto-container button {
-    background-color: rgb(0, 255, 255);
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgba(0, 255, 255, 0.5);
-    box-shadow: 5px 5px 10px rgba(0, 255, 255, 0.5);
-    cursor: pointer;
-}
+    button {
+        background-color: rgb(0, 255, 255);
+        color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid rgba(0, 255, 255, 0.5);
+        box-shadow: 5px 5px 10px rgba(0, 255, 255, 0.5);
+        cursor: pointer;
 
-.contacto-container button:hover {
-    background-color: rgb(255, 20, 147);
-    transform: scale(1.05);
+        &:hover {
+            background-color: rgb(255, 20, 147);
+            transform: scale(1.05);
+        }
+    }
 }
 
 
@@ -270,12 +254,12 @@ button:hover {
 .mouses-container {
     text-align: center;
     padding: 50px 20px;
-}
 
-.mouses-container h2 {
-    font-size: 3em;
-    color: rgb(255, 20, 147);
-    margin-bottom: 20px;
+    h2 {
+        font-size: 3em;
+        color: rgb(255, 20, 147);
+        margin-bottom: 20px;
+    }
 }
 
 .mouses-grid {
@@ -294,29 +278,31 @@ button:hover {
     box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
+.card-body {
+    h3 {
+        font-size: 1.8em;
+        color: rgb(139, 55, 250);
+        margin: 10px 0;
+    }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-.card-body h3 {
-    font-size: 1.8em;
-    color: rgb(139, 55, 250);
-    margin: 10px 0;
-}
-
-.card-body p {
-    color: rgb(200, 220, 255);
-    font-size: 1.2em;
-    margin-bottom: 15px;
+    p {
+        color: rgb(200, 220, 255);
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
 }
 
 .btn {
@@ -328,11 +314,11 @@ button:hover {
     color: black;
     border-radius: 8px;
     text-decoration: none;
+
+    &:hover{background-color: rgb(255, 20, 147);
+    }
 }
 
-.btn:hover {
-    background-color: rgb(255, 20, 147);
-}
 
 /*Ajustes para diferentes pantallas Mobile: 320px y Desktop: 800px*/
 
