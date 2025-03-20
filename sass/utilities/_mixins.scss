@@ -1,0 +1,16 @@
+// Mixins---------------------
+
+@mixin textPadding($textValor,$paddingValor){
+    text-align: $textValor;
+    padding: $paddingValor;
+}
+
+@mixin widthMaxW($widthValor,$maxWidthValor){
+    width: $widthValor;
+    max-width: $maxWidthValor;
+}
+
+@mixin border($borderValor,$radiusValor){
+    border: $borderValor;
+    border-radius: $radiusValor;
+}

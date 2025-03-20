@@ -1,0 +1,22 @@
+// Extends-----------------
+
+%flexBasico{
+    display: flex;
+    flex-direction: column;
+}
+
+%flexAjustes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+%displayILBlock{
+    display: inline-block;
+}
+
+%jusifyGapMargin{
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+}

@@ -1,0 +1,37 @@
+/*----------------------Header estilos-------------------*/
+
+@use "../variables" as variables;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+@use "../estilosGenerales" as *;
+.logotipo {
+    @include widthMaxW(140px,auto);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contenedorSuperior {
+    @extend %flexAjustes;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+.descripcion {
+    @include widthMaxW(100%,800px);
+    margin: 0 auto;
+    @extend %flexBasico;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+
+    img {
+        @include widthMaxW(100%,800px);
+    }
+}

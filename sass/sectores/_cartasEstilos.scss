@@ -1,0 +1,69 @@
+//ESTILO PARA CARTAS------------------
+@use "../variables" as variables;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+@use "../estilosGenerales" as *;
+
+.mouses-container {
+    @include textPadding(center,50px 20px);
+
+    h2 {
+        font-size: 3em;
+        color: rgb(255, 20, 147);
+        margin-bottom: 20px;
+    }
+}
+
+.mouses-grid {
+    @extend %jusifyGapMargin;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+}
+
+.card {
+    @include textPadding(center,20px);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.card-body {
+    h3 {
+        font-size: 1.8em;
+        color: rgb(139, 55, 250);
+        margin: 10px 0;
+    }
+
+    p {
+        color: rgb(200, 220, 255);
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+}
+
+.btn {
+    @extend %displayILBlock;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(0, 255, 255);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+
+    &:hover{background-color: rgb(255, 20, 147);
+    }
+}
