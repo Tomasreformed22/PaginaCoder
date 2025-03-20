@@ -1,8 +1,8 @@
 //ESTILO PARA CARTAS------------------
 @use "../variables" as variables;
-@use "../utilities/extends" as *;
-@use "../utilities/mixins" as *;
-@use "../estilosGenerales" as *;
+@use "../utilities/extends";
+@use "../utilities/mixins";
+@use "../estilosGenerales";
 
 .mouses-container {
     @include textPadding(center,50px 20px);

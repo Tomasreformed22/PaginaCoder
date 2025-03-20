@@ -1,8 +1,8 @@
 /*ESTILOS PARA PESTAÑA CONTACTO---------------------*/
 @use "../variables" as variables;
-@use "../utilities/extends" as *;
-@use "../utilities/mixins" as *;
-@use "../estilosGenerales" as *;
+@use "../utilities/extends";
+@use "../utilities/mixins";
+@use "../estilosGenerales";
 
 .contacto-container {
     @include textPadding(center,20px);

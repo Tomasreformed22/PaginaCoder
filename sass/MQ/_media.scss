@@ -1,0 +1,88 @@
+/*Ajustes para diferentes pantallas Mobile: 320px y Desktop: 800px*/
+
+
+/*---------------Media------------*/
+
+
+@media (min-width: 800px) {
+    .contenedorSecciones {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+
+@media (max-width: 799px) {
+    .contenedorSuperior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .contenedorSecciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descripcion img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .descripcion h1{
+        font-size: 2.5em;
+    }
+
+    .descripcion p {
+        font-size: 1rem;  
+        padding: 0 15px;  
+    }
+
+    .descripcion {
+        padding-top: 20px;
+    }
+
+    .pros ul {
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+
+    .pros li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2em;
+    }
+
+    .contacto-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .contacto-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .mouses-container {
+        padding: 30px 10px;
+    }
+
+    .card-body p {
+        font-size: 1em;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}

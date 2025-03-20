@@ -1,9 +1,10 @@
 /*----------------------Header estilos-------------------*/
 
 @use "../variables" as variables;
-@use "../utilities/extends" as *;
-@use "../utilities/mixins" as *;
-@use "../estilosGenerales" as *;
+@use "../utilities/extends";
+@use "../utilities/mixins";
+@use "../estilosGenerales";
+
 .logotipo {
     @include widthMaxW(140px,auto);
     margin-top: 0;
