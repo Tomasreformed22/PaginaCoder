@@ -1,23 +1,29 @@
-@use "./variables" as variables;
-@use "./utilities/extends";
-@use "./utilities/mixins";
-@use "./estilosGenerales";
-@import "./sectores/headerEstilos";
-@import "./sectores/cartasEstilos";
-@import "./sectores/mainEstilos";
-@import "./sectores/navbarEstilos";
-@import "./sectores/_contactoEstilos.scss";
-@import "./MQ/media";
+// Utilities
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extends';
 
-/*pasos para git:
+// Base
+@import 'base/global';
+@import 'base/typography';
+@import 'base/body';
 
-git init(solo una vez)
+// Layout
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/contact';
 
-git status
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/navbar';
 
-git add .
+// Responsive
+@import 'responsive/mediaqueries';
 
-git commit -m "que cambios hice"
 
-git push
-*/
+
+
+
+

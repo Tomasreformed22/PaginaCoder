@@ -1,0 +1,14 @@
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0px -5px 15px rgba(0, 255, 255, 0.15);
+  
+    p {
+      color: $primary-color;
+      font-size: 1em;
+      margin: 0;
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    }
+  }

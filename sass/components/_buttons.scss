@@ -1,0 +1,27 @@
+button {
+    @include border(5px 5px 10px rgba(0, 255, 255, 0.493),10px);
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 255, 255, 0.493);
+    color: black;
+    background-color: $button-color;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.btn {
+    @extend %displayILBlock;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(0, 255, 255);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+
+    &:hover{background-color: rgb(255, 20, 147);
+    }
+}

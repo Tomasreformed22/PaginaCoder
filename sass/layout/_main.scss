@@ -1,13 +1,9 @@
 /*-------------------Estilos main------------------*/
 
-@use "../variables" as variables;
-@use "../utilities/extends";
-@use "../utilities/mixins";
-@use "../estilosGenerales";
 
 .contenedorSecciones {
     @extend %flexAjustes;
-    @extend %jusifyGapMargin;
+    @extend %justifyGapMargin;
     @include textPadding(center,20px);
     flex-direction: row;
     max-width: 1200px;
@@ -47,5 +43,3 @@
         }
     }
 }
-
-
